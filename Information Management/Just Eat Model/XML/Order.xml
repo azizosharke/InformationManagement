@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE Orders [
+<!ELEMENT Orders (Order*)>
+<!ELEMENT Order ( Order_name* , Order_type+ , Order_number* , Order_Payment*)>
+<!ATTLIST Order_Payment idref CDATA #REQUIRED>
+<!ELEMENT Order_name (#PCDATA)>
+<!ELEMENT Order_type (#PCDATA)>
+<!ELEMENT Order_number (#PCDATA)>
+<!ELEMENT Order_Payment (#PCDATA)>
+
+
+]>
+
+
+
+
+<Orders>
+  <Order>
+    <Order_name>Chicken Nuggets</Order_name>
+    <Order_type>Takeaway</Order_type>
+    <Order_number>203992123</Order_number>
+    <Order_Payment idref="201">
+    </Order_Payment>
+  </Order>
+  <Order>
+    <Order_name>Chicken Burger</Order_name>
+    <Order_type>Delivery</Order_type>
+    <Order_number>203992123</Order_number>
+<Order_Payment idref="207">
+    </Order_Payment>
+
+
+  </Order>
+</Orders>
