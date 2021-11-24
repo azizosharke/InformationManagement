@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Finder[ 
+<!ELEMENT Finder (Search* )>
+<!ELEMENT Search (orderID* , orderNumber*)>
+<!ATTLIST Search restaurant_search CDATA #REQUIRED>
+<!ATTLIST Search food_search CDATA #REQUIRED>
+<!ELEMENT orderID (#PCDATA)>
+<!ELEMENT orderNumber (#PCDATA)>
+
+
+] > 
+
+<Finder>
+
+<Search restaurant_search = 'Mad Egg' food_search = 'Beef Burger'>
+<orderID>  2020213 </orderID>
+<orderNumber> 20 </orderNumber>
+</Search>
+<Search restaurant_search = 'Burger King' food_search = 'Triple Cheesy Whopper'>
+<orderID>  2020213 </orderID>
+<orderNumber> 30 </orderNumber>
+</Search>
+<Search restaurant_search = 'Dominos Pizza' food_search = 'Mighty Meaty'>
+<orderID>  2020213 </orderID>
+<orderNumber> 40 </orderNumber>
+</Search>
+</Finder>

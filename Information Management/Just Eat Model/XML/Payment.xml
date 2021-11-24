@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE Payments[ <!ELEMENT Payments(Payment)>
+<!ELEMENT Payment (payment_amount, payment_type)>
+<!ELEMENT payment_amount (#PCDATA)>
+<!ELEMENT payment_type (#PCDATA)>
+<!ATTLIST Payment id CDATA #REQUIRED>
+]>
+
+<Payments>
+
+<Payment id = "201">
+<payment_amount> 100 </payment_amount>
+<payment_type> Apple Pay </payment_type>
+</Payment>
+
+<Payment id = "101">
+<payment_amount> 12.95</payment_amount>
+<payment_type> Cash </payment_type>
+</Payment>
+
+<Payment id = "301">
+<payment_amount> 43.65 </payment_amount>
+<payment_type> card </payment_type>
+</Payment>
+
+</Payments>

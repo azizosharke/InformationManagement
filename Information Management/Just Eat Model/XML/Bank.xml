@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE doc [ 
+<!ELEMENT doc (payment* , bank*)>
+
+
+<!ELEMENT payment ( bank*,amount? , type+)>
+<!ELEMENT bank ( number*, name?, type+)>
+<!ATTLIST doc type CDATA #REQUIRED >
+<!ATTLIST doc xml:lang CDATA #IMPLIED >
+<!ATTLIST bank name CDATA #IMPLIED >
+
+<!ELEMENT amount (#PCDATA)  >
+<!ELEMENT name (#PCDATA)    > 
+<!ELEMENT type (#PCDATA)    >
+<!ELEMENT number (#PCDATA)  >
+
+
+] > 
+
+
+<doc type="bank" xml:lang="en">
+  <payment>
+         <bank name="Allied Irish Banks">
+           <number>20331234</number>
+           <name>Folabi</name>
+           <type>Student account</type>
+        </bank>
+<bank name="Bank Of Ireland">
+           <number>20554553</number>
+           <name>Mousa</name>
+           <type>Business account</type>
+        </bank>
+<bank name="Permenant TSB">
+           <number>20784553</number>
+           <name>Anton</name>
+           <type>Personal account</type>
+        </bank>
+
+
+
+              <amount>1000</amount>
+              <type>Apple pay</type>                   </payment>
+     <payment>
+
+              <amount>12.95</amount>
+              <type>Cash</type>
+    </payment>
+       <payment>
+               <amount>43.65</amount>
+              <type>card</type>
+      </payment>
+
+</doc>
